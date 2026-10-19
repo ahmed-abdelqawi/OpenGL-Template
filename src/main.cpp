@@ -62,21 +62,19 @@ int main()
     return 0;
 }
 
-/* GLFW will call this function everytime we resize the window so it can update the OpenGL viewport */
 #ifdef __clang__
-
 #pragma clang diagnostic push /* that's to keep my sanity :) */
 #pragma clang diagnostic ignored "-Wunused-parameter"
-
 #endif /* __CLANG__ */
+
+/* GLFW will call this function everytime we resize the window so it can update the OpenGL viewport */
 void framebuffer_size_callback(GLFWwindow *window, int width, int height)
 {
     glViewport(0, 0, width, height);
 }
+
 #ifdef __clang__
-
 #pragma clang diagnostic pop
-
 #endif /* __CLANG__ */
 
 void processInput(GLFWwindow *window)
